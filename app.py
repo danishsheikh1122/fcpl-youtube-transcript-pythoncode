@@ -53,6 +53,7 @@
 #     app.run()
 
 
+import os
 import random
 import re
 import time
@@ -63,10 +64,8 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 app = Flask(__name__)
 
-# Supabase credentials
-SUPABASE_URL = "https://dkemygpazfdnojtkqbmb.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRrZW15Z3BhemZkbm9qdGtxYm1iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIyMzY1ODAsImV4cCI6MjA1NzgxMjU4MH0.AZMr3TVIr3XbneyE4MlLPmaAPS2tqxjX5DVLsGZMLqA"
-
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 # Create Supabase client
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 

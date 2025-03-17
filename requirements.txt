@@ -3,3 +3,8 @@ youtube-transcript-api
 yt-dlp
 certifi
 gunicorn
+flask
+supabase
+youtube-transcript-api
+python-dotenv
+gunicorn
