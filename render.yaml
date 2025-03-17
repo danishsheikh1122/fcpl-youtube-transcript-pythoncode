@@ -3,9 +3,9 @@ services:
     name: youtube-transcript-api
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    startCommand: "./start.sh"
     envVars:
       - key: PYTHON_VERSION
         value: 3.9
       - key: PORT
-        value: 5000
+        value: 10000  # Render auto-assigns a port
